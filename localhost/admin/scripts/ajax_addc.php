@@ -76,9 +76,10 @@ switch ($action) {
 				$product_img = $_REQUEST['product_img'];
 				$product_description = $_REQUEST['product_description'];
 				$product_price = $_REQUEST['product_price'];
+				$product_visibility = $_REQUEST['visibility']
 			
 				// Добавление данных в бд
-				$insertResult = mysqli_query($db, "INSERT INTO products(category_id, name, img, description, price) VALUES ('$category_id', '$product_name', '$product_img', '$product_description', '$product_price')");
+				$insertResult = mysqli_query($db, "INSERT INTO products(category_id, name, img, description, price, visibility) VALUES ('$category_id', '$product_name', '$product_img', '$product_description', '$product_price', '$product_visibility')");
 			
 				// Успешное добавление
 				if ($insertResult){
