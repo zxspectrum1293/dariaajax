@@ -76,19 +76,21 @@ include("blocks/head.php");
                                 // Если в результате есть строка с найденной категорией вывести выпечку из категории
                                 if ($category = mysqli_fetch_array($result)) {
                                     // Запросить из бд
-                                    $result = mysqli_query($db, "SELECT id, name, img, description, price FROM products WHERE category_id = $category_id"); 
+                                    $result = mysqli_query($db, "SELECT id, name, img, description, price, visibility FROM products WHERE category_id = $category_id"); 
                                     
                                     // Пока из результата не прочитаны все продукты
                                     while($product = mysqli_fetch_array($result)) {
-                                        // Вывести продукт
-                                        print <<<HERE
-                                        <h2 align="center"> $product[name] </h2>
-                                        <p align="center">
-                                            <img src="$product[img]" width="100%">
-                                        </p>                                  
-                                        <p> $product[description] </p>  
-                                        <p> <b>Цена:</b> $product[price] р.</p>
-                                        HERE;
+                                        if ($product['visivility'] == 1) {
+                                            // Вывести продукт
+                                            print <<<HERE
+                                            <h2 align="center"> $product[name] </h2>
+                                            <p align="center">
+                                                <img src="$product[img]" width="100%">
+                                            </p>                                  
+                                            <p> $product[description] </p>  
+                                            <p> <b>Цена:</b> $product[price] р.</p>
+                                            HERE;
+                                        }
                                     }
                                 }
 
