@@ -70,6 +70,12 @@ include("blocks/head.php");
                             <br><br>
                             Цена (число) <br>
                             <input type="number" name="product_price" id="product_price">
+                            <br><br>
+                            Видимость
+                            <select name="visibility" id="visibility">
+                                <option value="1">Видно всем</option>
+                                <option value="0">Видимость отсутствует</option>
+                            </select>
 
                             <br><br>
                             <input type="submit" value="Создать">
