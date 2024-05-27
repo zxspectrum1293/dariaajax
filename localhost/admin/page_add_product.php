@@ -3,7 +3,7 @@
 $html_description = '';
 $html_keywords = "";
 $html_title = 'Админ-панель Хлебушка';
-
+//a
 // Импортировать <head> страницы из PHP файла
 include("blocks/head.php");
 ?>

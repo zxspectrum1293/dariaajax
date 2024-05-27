@@ -4,7 +4,7 @@
     $action = $_POST['action'];
 	
 	
-	
+	//a
 switch ($action) {
     case 1: 
 		$category_name = $_REQUEST['category_name'];
