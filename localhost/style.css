@@ -1,0 +1,48 @@
+body{
+    background: url("img/фон.jpg");
+}
+.main_table { 
+    border: 1px solid #000000;
+    background-color: #ffffff;
+}
+
+.left { 
+    background-color: #F6F6F6;
+    border-right:1px;
+}
+
+
+p { 
+    font-family: Verdana;
+    font-size:12px;
+    margin:15px;
+}
+
+p.title {
+    background-color: #A72E37;
+    color: #ffffff;
+    font-weight:bold;
+    padding:5px;
+}
+
+#coolmenu{
+    border: 1px solid black;
+    border-bottom-width: 0;
+    background-color: #f6f6f6; /*Фоновый цвет ячейки*/
+    margin:8px; /*Ширина отступов*/
+}
+
+#coolmenu a{
+    display: block;
+    padding: 5px;
+    font: bold 13px Verdana; /*Шрифт текста*/
+    width: 150px; /*Ширина ячейки*/
+    color: #000000; /*Цвет текста*/
+    text-decoration: none; /*Подчеркивание у ссылок - нет*/
+    border-bottom: 1px solid gray;
+}
+
+#coolmenu a:hover{
+    background-color: #cccccc; /*Фоновый цвет ячейки при наведение курсора*/
+    color: #000000; /*Цвет текста при наведении курсора*/
+}
